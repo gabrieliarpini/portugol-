@@ -11,7 +11,18 @@ programa {
 
     total= semestre2+ semestre2
 
-    escreva("O aluno obteve o valor de " + total + " somando os dois semestres.")
+    se(total >= 60)
+    {
+    escreva("A nota final do aluno é: "+ total)
+    }
+
+    senao
+    {
+    escreva("A nota final do aluno é: "+ total+ "\n")
+    escreva("REPROVADO")
+    }
+
+   
   
   }
 }
