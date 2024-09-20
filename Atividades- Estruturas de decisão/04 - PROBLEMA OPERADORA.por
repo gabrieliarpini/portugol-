@@ -8,7 +8,7 @@ programa {
     escreva("Informe quantos minutos ele consumiu :  ")
     leia(min)
 
-    se(min < 100)
+    se(min <= 100)
     {
       escreva("Valor a pagar: R$ 50.00")
     }
