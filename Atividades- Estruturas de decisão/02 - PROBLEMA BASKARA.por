@@ -1,44 +1,54 @@
 programa {
-  funcao inicio() 
+
+  inclua biblioteca Matematica
+  funcao inicio()
   {
+    real a, b, c, delta, x1, x2
 
-    real A, B, C, delta, x1, x2,x
 
-    escreva("Informe o valor do coeficiente A: ")
-    leia(A)
 
-    escreva("Informe o valor do coeficiente B: ")
-    leia(B)
+    escreva("Coeficiente a: ")
+    leia(a)
 
-    escreva("Informe o valor do coeficiente C: ")
-    leia(C)
+    escreva("Coeficiente b: ")
+    leia(b)
+
+    escreva("Coeficiente c: ")
+    leia(c)
+
+  
+    delta = b * b - 4 * a * c
 
    
+    se (delta > 0)
+    {
 
-    se(A==0) 
-    {
-     escreva("O coeficiente 'A' n„o pode ser zero para uma equaÁ„o do segundo grau.")
-    }
-    senao 
-    delta = B * B - 4 * A * C
+        x1 = (-b + Matematica.raiz(delta, 2.0)) / (2 * a)
 
-    se(delta > 0)
-    {
-     x1= (-B + delta)/ (2*A)
-     x2= (-B - delta)/ (2*A)
+        x2 = (-b - Matematica.raiz(delta, 2.0)) / (2 * a)
+
+        escreva("X1 = "+ x1 + "\n")
+
+        escreva("X2 = "+ x2 + "\n")
     }
-    senao 
-    {
-   escreva("N„o existe raiz")
-    }
-    se(x1> x2)
-    {
-      x= x1
-      x1= x2
-      x2= x
+    senao
+        se (delta == 0 )
+        {
+            x1 = -b / (2 * a)
+
+            escreva("X1 = "+ x1 + "\n")
+
+            escreva("X2 = "+ x1 + "\n")
+        }
+        senao
+        {
+            escreva("A equa√ß√£o n√£o possui ra√≠zes reais.\n")
+        }
+  }
+}
     }
 
-    escreva("O valor do x1 e x2 s„o: " + "\n" + x1+ "\n" + x2 + "\n")
+    escreva("O valor do x1 e x2 s√£o: " + "\n" + x1+ "\n" + x2 + "\n")
 
   }
 }
